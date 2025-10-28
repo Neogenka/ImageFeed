@@ -19,6 +19,11 @@ final class CustomTabBarController: UITabBarController {
             image: UIImage(resource: .tabProfileActive),
             selectedImage: nil
             )
+        imagesListViewController.tabBarItem = UITabBarItem(
+            title: "",
+            image: UIImage(resource: .tabEditorialActive),
+            selectedImage: nil
+        )
         
         viewControllers = [imagesListViewController, profileViewController]
         

@@ -15,7 +15,6 @@ class ImagesListViewController: UIViewController {
     private lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMMM yyyy"
-        dateFormatter.locale = Locale(identifier: "ru_RU")
         return dateFormatter
     } ()
     
@@ -55,7 +54,6 @@ class ImagesListViewController: UIViewController {
         super.viewDidLoad()
         tableView.rowHeight = 200
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
-        // Do any additional setup after loading the view.
     }
 }
 
