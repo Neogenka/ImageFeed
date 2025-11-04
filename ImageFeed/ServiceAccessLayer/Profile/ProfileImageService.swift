@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ProfileImageService {
+final class ProfileImageService: ProfileImageServiceProtocol {
     static let shared = ProfileImageService()
     private var task: URLSessionTask?
     private var session: URLSession = .shared
@@ -63,4 +63,8 @@ final class ProfileImageService {
         task.resume()
     }
     
+}
+
+public protocol ProfileImageServiceProtocol {
+    var avatarURL: String? { get }
 }
