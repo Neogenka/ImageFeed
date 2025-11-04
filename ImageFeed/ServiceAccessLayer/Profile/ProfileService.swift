@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ProfileService {
+final class ProfileService: ProfileServiceProtocol {
     
     private var task: URLSessionTask?
     private var session: URLSession = .shared
@@ -58,4 +58,9 @@ final class ProfileService {
         self.task = task
         task.resume()
     }
+}
+
+public protocol ProfileServiceProtocol: AnyObject {
+    var profile: Profile? { get }
+    func cleanProfile()
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class OAuth2Service {
+final class OAuth2Service: OAuth2ServiceProtocol {
     static let shared = OAuth2Service()
     private var task: URLSessionTask? = nil
     private var lastCode: String? = nil
@@ -67,4 +67,8 @@ final class OAuth2Service {
         self.task = task
         task.resume()
     }
+}
+
+public protocol OAuth2ServiceProtocol {
+    
 }
